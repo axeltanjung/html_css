@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        ::marker {
+            color : hotpink;
+        }
+
+        ul ::marker {
+            font-size: 1.5em;
+        }
+
+        ol ::marker {
+            font-size: 1.1em;
+        }
+
+        summary::marker {
+            content: "\002B"" "; /* Plus symbol with space */
+        }
+
+        details[open] summary::marker {
+            content: "\2212"" "; /* Minus symbol with space */
+        }
+
+        /* Presentation style */
+        li + li {
+            margin-top:0.25 em;
+        }
+
+        ol {
+            padding: 0 0 0 1.1em;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <article class="flow">
+            <h1> the <code>::marker</code> pseudo-element</h1>
+            <figure class="callout">
+                <p>Using<code>::marker</code> pseudo-element, you can style marker of the <code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code>, <code>&lt;summary&gt;</code> elements.
+                </p>
+            </figure>
+            <ul>
+                <li>Donec ullarcopem nula nom metus auctor frigilla</li>
+                <li>Morbie leo, ponta risus ar secutor vestimbula</li>
+                <li>Curabitor biandit tempus portitor</li>
+            </ul>
+            <ol>
+                <li>Donec ullarcopem nula nom metus auctor frigilla</li>
+                <li>Morbie leo, ponta risus ar secutor vestimbula</li>
+                <li>Curabitor biandit tempus portitor</li>
+            </ol>
+            <details>
+                <summary>Open for some more content</summary>
+            </details>
+        </article>
+    </div>
+</body>
+</html>
